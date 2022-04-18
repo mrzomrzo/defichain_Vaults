@@ -1,8 +1,8 @@
 {
-  "node_User": "VcflzEQq",
-  "node_Password": "6d3edc407578f8a26b7f481555a32d5a9a174e911953358b0f35d017122e2bec",
+  "node_User": "yourNodeUser",
+  "node_Password": "yourNodePW",
   "node_URL": "http://127.0.0.1:8554/",
-  "address": "dSBVE8ovbCMXCzjPRdpyEkGMspk6nfGHdo",
+  "address": "yourDFIWalletaddress",
   "logToFile": true,
   "telegram": {
     "token": "notUsedNow",
