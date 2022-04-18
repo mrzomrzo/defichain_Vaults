@@ -37,14 +37,21 @@ Partial Class FullNode_Wallet
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.lbl_futureSwap = New System.Windows.Forms.Label()
-        Me.pgb_statusTransaktion = New System.Windows.Forms.ProgressBar()
+        Me.TableLayoutPanel18 = New System.Windows.Forms.TableLayoutPanel()
         Me.lbl_statusTransaktion = New System.Windows.Forms.Label()
+        Me.btn_transaktionOK = New System.Windows.Forms.Button()
+        Me.pgb_statusTransaktion = New System.Windows.Forms.ProgressBar()
         Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel9 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel8 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btn_openSwap = New System.Windows.Forms.Button()
+        Me.pnl_guthaben = New System.Windows.Forms.Panel()
+        Me.TableLayoutPanel16 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel13 = New System.Windows.Forms.TableLayoutPanel()
         Me.pb_swapToken = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -62,30 +69,26 @@ Partial Class FullNode_Wallet
         Me.TableLayoutPanel11 = New System.Windows.Forms.TableLayoutPanel()
         Me.lbl_guthabenfromAsset = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel15 = New System.Windows.Forms.TableLayoutPanel()
         Me.btn_cancelSwap = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel8 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.btn_openSwap = New System.Windows.Forms.Button()
-        Me.pnl_guthaben = New System.Windows.Forms.Panel()
+        Me.TableLayoutPanel17 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btn_confirmDEXswap = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.lnk_walletDefiIncome = New System.Windows.Forms.LinkLabel()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel15 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel16 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel17 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btn_confirmDEXswap = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel18 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btn_transaktionOK = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
         Me.TableLayoutPanel5.SuspendLayout()
+        Me.TableLayoutPanel18.SuspendLayout()
         Me.TableLayoutPanel6.SuspendLayout()
         Me.TableLayoutPanel7.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TableLayoutPanel9.SuspendLayout()
+        Me.TableLayoutPanel8.SuspendLayout()
+        Me.TableLayoutPanel16.SuspendLayout()
         Me.TableLayoutPanel13.SuspendLayout()
         CType(Me.pb_swapToken, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -94,12 +97,9 @@ Partial Class FullNode_Wallet
         Me.GroupBox2.SuspendLayout()
         Me.TableLayoutPanel10.SuspendLayout()
         Me.TableLayoutPanel11.SuspendLayout()
-        Me.TableLayoutPanel8.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
         Me.TableLayoutPanel15.SuspendLayout()
-        Me.TableLayoutPanel16.SuspendLayout()
         Me.TableLayoutPanel17.SuspendLayout()
-        Me.TableLayoutPanel18.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
         Me.SuspendLayout()
         '
         'timer_refresh
@@ -275,15 +275,20 @@ Partial Class FullNode_Wallet
         Me.lbl_futureSwap.Text = "nextFutureSwap in:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "0 Blocks " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "≈ 0t-0h-0min"
         Me.lbl_futureSwap.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'pgb_statusTransaktion
+        'TableLayoutPanel18
         '
-        Me.pgb_statusTransaktion.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pgb_statusTransaktion.Location = New System.Drawing.Point(4, 1347)
-        Me.pgb_statusTransaktion.Name = "pgb_statusTransaktion"
-        Me.pgb_statusTransaktion.Size = New System.Drawing.Size(334, 26)
-        Me.pgb_statusTransaktion.Style = System.Windows.Forms.ProgressBarStyle.Marquee
-        Me.pgb_statusTransaktion.TabIndex = 9
-        Me.pgb_statusTransaktion.Visible = False
+        Me.TableLayoutPanel18.ColumnCount = 2
+        Me.TableLayoutPanel18.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 246.0!))
+        Me.TableLayoutPanel18.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel18.Controls.Add(Me.lbl_statusTransaktion, 0, 0)
+        Me.TableLayoutPanel18.Controls.Add(Me.btn_transaktionOK, 1, 0)
+        Me.TableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel18.Location = New System.Drawing.Point(4, 1258)
+        Me.TableLayoutPanel18.Name = "TableLayoutPanel18"
+        Me.TableLayoutPanel18.RowCount = 1
+        Me.TableLayoutPanel18.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel18.Size = New System.Drawing.Size(334, 82)
+        Me.TableLayoutPanel18.TabIndex = 4
         '
         'lbl_statusTransaktion
         '
@@ -297,6 +302,29 @@ Partial Class FullNode_Wallet
         Me.lbl_statusTransaktion.Text = "Status Transaktion"
         Me.lbl_statusTransaktion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lbl_statusTransaktion.Visible = False
+        '
+        'btn_transaktionOK
+        '
+        Me.btn_transaktionOK.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_transaktionOK.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn_transaktionOK.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_transaktionOK.Location = New System.Drawing.Point(249, 3)
+        Me.btn_transaktionOK.Name = "btn_transaktionOK"
+        Me.btn_transaktionOK.Size = New System.Drawing.Size(82, 76)
+        Me.btn_transaktionOK.TabIndex = 13
+        Me.btn_transaktionOK.Text = "OK"
+        Me.btn_transaktionOK.UseVisualStyleBackColor = True
+        Me.btn_transaktionOK.Visible = False
+        '
+        'pgb_statusTransaktion
+        '
+        Me.pgb_statusTransaktion.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pgb_statusTransaktion.Location = New System.Drawing.Point(4, 1347)
+        Me.pgb_statusTransaktion.Name = "pgb_statusTransaktion"
+        Me.pgb_statusTransaktion.Size = New System.Drawing.Size(334, 26)
+        Me.pgb_statusTransaktion.Style = System.Windows.Forms.ProgressBarStyle.Marquee
+        Me.pgb_statusTransaktion.TabIndex = 9
+        Me.pgb_statusTransaktion.Visible = False
         '
         'TableLayoutPanel6
         '
@@ -380,6 +408,71 @@ Partial Class FullNode_Wallet
         Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 226.0!))
         Me.TableLayoutPanel9.Size = New System.Drawing.Size(1442, 1239)
         Me.TableLayoutPanel9.TabIndex = 1
+        '
+        'TableLayoutPanel8
+        '
+        Me.TableLayoutPanel8.ColumnCount = 2
+        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 502.0!))
+        Me.TableLayoutPanel8.Controls.Add(Me.Label2, 0, 0)
+        Me.TableLayoutPanel8.Controls.Add(Me.btn_openSwap, 1, 0)
+        Me.TableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel8.Location = New System.Drawing.Point(4, 4)
+        Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
+        Me.TableLayoutPanel8.RowCount = 1
+        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel8.Size = New System.Drawing.Size(1434, 60)
+        Me.TableLayoutPanel8.TabIndex = 0
+        '
+        'Label2
+        '
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(3, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(926, 60)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Wallet - Guthaben"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'btn_openSwap
+        '
+        Me.btn_openSwap.BackgroundImage = CType(resources.GetObject("btn_openSwap.BackgroundImage"), System.Drawing.Image)
+        Me.btn_openSwap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btn_openSwap.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_openSwap.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn_openSwap.Font = New System.Drawing.Font("Rockwell", 10.875!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_openSwap.Location = New System.Drawing.Point(935, 3)
+        Me.btn_openSwap.Name = "btn_openSwap"
+        Me.btn_openSwap.Size = New System.Drawing.Size(496, 54)
+        Me.btn_openSwap.TabIndex = 2
+        Me.btn_openSwap.Text = "DEX - Tausch"
+        Me.btn_openSwap.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_openSwap.UseVisualStyleBackColor = False
+        '
+        'pnl_guthaben
+        '
+        Me.pnl_guthaben.AutoScroll = True
+        Me.pnl_guthaben.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnl_guthaben.Location = New System.Drawing.Point(4, 71)
+        Me.pnl_guthaben.Name = "pnl_guthaben"
+        Me.pnl_guthaben.Size = New System.Drawing.Size(1434, 937)
+        Me.pnl_guthaben.TabIndex = 1
+        '
+        'TableLayoutPanel16
+        '
+        Me.TableLayoutPanel16.ColumnCount = 1
+        Me.TableLayoutPanel16.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel16.Controls.Add(Me.TableLayoutPanel13, 0, 0)
+        Me.TableLayoutPanel16.Controls.Add(Me.TableLayoutPanel17, 0, 1)
+        Me.TableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel16.Location = New System.Drawing.Point(4, 1015)
+        Me.TableLayoutPanel16.Name = "TableLayoutPanel16"
+        Me.TableLayoutPanel16.RowCount = 2
+        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 155.0!))
+        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel16.Size = New System.Drawing.Size(1434, 220)
+        Me.TableLayoutPanel16.TabIndex = 2
         '
         'TableLayoutPanel13
         '
@@ -599,6 +692,21 @@ Partial Class FullNode_Wallet
         Me.Label6.TabIndex = 13
         Me.Label6.Text = "Guthaben:"
         '
+        'TableLayoutPanel15
+        '
+        Me.TableLayoutPanel15.ColumnCount = 2
+        Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 69.0!))
+        Me.TableLayoutPanel15.Controls.Add(Me.btn_cancelSwap, 1, 0)
+        Me.TableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel15.Location = New System.Drawing.Point(1347, 3)
+        Me.TableLayoutPanel15.Name = "TableLayoutPanel15"
+        Me.TableLayoutPanel15.RowCount = 2
+        Me.TableLayoutPanel15.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55.0!))
+        Me.TableLayoutPanel15.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel15.Size = New System.Drawing.Size(78, 143)
+        Me.TableLayoutPanel15.TabIndex = 4
+        '
         'btn_cancelSwap
         '
         Me.btn_cancelSwap.Cursor = System.Windows.Forms.Cursors.Hand
@@ -612,55 +720,32 @@ Partial Class FullNode_Wallet
         Me.btn_cancelSwap.Text = "X"
         Me.btn_cancelSwap.UseVisualStyleBackColor = False
         '
-        'TableLayoutPanel8
+        'TableLayoutPanel17
         '
-        Me.TableLayoutPanel8.ColumnCount = 2
-        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 502.0!))
-        Me.TableLayoutPanel8.Controls.Add(Me.Label2, 0, 0)
-        Me.TableLayoutPanel8.Controls.Add(Me.btn_openSwap, 1, 0)
-        Me.TableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel8.Location = New System.Drawing.Point(4, 4)
-        Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
-        Me.TableLayoutPanel8.RowCount = 1
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel8.Size = New System.Drawing.Size(1434, 60)
-        Me.TableLayoutPanel8.TabIndex = 0
+        Me.TableLayoutPanel17.ColumnCount = 3
+        Me.TableLayoutPanel17.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel17.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 342.0!))
+        Me.TableLayoutPanel17.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel17.Controls.Add(Me.btn_confirmDEXswap, 1, 0)
+        Me.TableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel17.Location = New System.Drawing.Point(3, 158)
+        Me.TableLayoutPanel17.Name = "TableLayoutPanel17"
+        Me.TableLayoutPanel17.RowCount = 1
+        Me.TableLayoutPanel17.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel17.Size = New System.Drawing.Size(1428, 59)
+        Me.TableLayoutPanel17.TabIndex = 19
         '
-        'Label2
+        'btn_confirmDEXswap
         '
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(926, 60)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Wallet - Guthaben"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'btn_openSwap
-        '
-        Me.btn_openSwap.BackgroundImage = CType(resources.GetObject("btn_openSwap.BackgroundImage"), System.Drawing.Image)
-        Me.btn_openSwap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btn_openSwap.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_openSwap.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btn_openSwap.Font = New System.Drawing.Font("Rockwell", 10.875!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_openSwap.Location = New System.Drawing.Point(935, 3)
-        Me.btn_openSwap.Name = "btn_openSwap"
-        Me.btn_openSwap.Size = New System.Drawing.Size(496, 54)
-        Me.btn_openSwap.TabIndex = 2
-        Me.btn_openSwap.Text = "DEX - Tausch"
-        Me.btn_openSwap.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_openSwap.UseVisualStyleBackColor = False
-        '
-        'pnl_guthaben
-        '
-        Me.pnl_guthaben.AutoScroll = True
-        Me.pnl_guthaben.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnl_guthaben.Location = New System.Drawing.Point(4, 71)
-        Me.pnl_guthaben.Name = "pnl_guthaben"
-        Me.pnl_guthaben.Size = New System.Drawing.Size(1434, 937)
-        Me.pnl_guthaben.TabIndex = 1
+        Me.btn_confirmDEXswap.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btn_confirmDEXswap.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_confirmDEXswap.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn_confirmDEXswap.Location = New System.Drawing.Point(546, 3)
+        Me.btn_confirmDEXswap.Name = "btn_confirmDEXswap"
+        Me.btn_confirmDEXswap.Size = New System.Drawing.Size(336, 53)
+        Me.btn_confirmDEXswap.TabIndex = 0
+        Me.btn_confirmDEXswap.Text = "Tausch"
+        Me.btn_confirmDEXswap.UseVisualStyleBackColor = False
         '
         'TabPage3
         '
@@ -697,91 +782,6 @@ Partial Class FullNode_Wallet
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopRight
         Me.Label4.Visible = False
         '
-        'TableLayoutPanel15
-        '
-        Me.TableLayoutPanel15.ColumnCount = 2
-        Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 69.0!))
-        Me.TableLayoutPanel15.Controls.Add(Me.btn_cancelSwap, 1, 0)
-        Me.TableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel15.Location = New System.Drawing.Point(1347, 3)
-        Me.TableLayoutPanel15.Name = "TableLayoutPanel15"
-        Me.TableLayoutPanel15.RowCount = 2
-        Me.TableLayoutPanel15.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55.0!))
-        Me.TableLayoutPanel15.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel15.Size = New System.Drawing.Size(78, 143)
-        Me.TableLayoutPanel15.TabIndex = 4
-        '
-        'TableLayoutPanel16
-        '
-        Me.TableLayoutPanel16.ColumnCount = 1
-        Me.TableLayoutPanel16.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel16.Controls.Add(Me.TableLayoutPanel13, 0, 0)
-        Me.TableLayoutPanel16.Controls.Add(Me.TableLayoutPanel17, 0, 1)
-        Me.TableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel16.Location = New System.Drawing.Point(4, 1015)
-        Me.TableLayoutPanel16.Name = "TableLayoutPanel16"
-        Me.TableLayoutPanel16.RowCount = 2
-        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 155.0!))
-        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel16.Size = New System.Drawing.Size(1434, 220)
-        Me.TableLayoutPanel16.TabIndex = 2
-        '
-        'TableLayoutPanel17
-        '
-        Me.TableLayoutPanel17.ColumnCount = 3
-        Me.TableLayoutPanel17.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel17.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 342.0!))
-        Me.TableLayoutPanel17.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel17.Controls.Add(Me.btn_confirmDEXswap, 1, 0)
-        Me.TableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel17.Location = New System.Drawing.Point(3, 158)
-        Me.TableLayoutPanel17.Name = "TableLayoutPanel17"
-        Me.TableLayoutPanel17.RowCount = 1
-        Me.TableLayoutPanel17.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel17.Size = New System.Drawing.Size(1428, 59)
-        Me.TableLayoutPanel17.TabIndex = 19
-        '
-        'btn_confirmDEXswap
-        '
-        Me.btn_confirmDEXswap.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.btn_confirmDEXswap.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_confirmDEXswap.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btn_confirmDEXswap.Location = New System.Drawing.Point(546, 3)
-        Me.btn_confirmDEXswap.Name = "btn_confirmDEXswap"
-        Me.btn_confirmDEXswap.Size = New System.Drawing.Size(336, 53)
-        Me.btn_confirmDEXswap.TabIndex = 0
-        Me.btn_confirmDEXswap.Text = "Tausch"
-        Me.btn_confirmDEXswap.UseVisualStyleBackColor = False
-        '
-        'TableLayoutPanel18
-        '
-        Me.TableLayoutPanel18.ColumnCount = 2
-        Me.TableLayoutPanel18.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 246.0!))
-        Me.TableLayoutPanel18.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel18.Controls.Add(Me.lbl_statusTransaktion, 0, 0)
-        Me.TableLayoutPanel18.Controls.Add(Me.btn_transaktionOK, 1, 0)
-        Me.TableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel18.Location = New System.Drawing.Point(4, 1258)
-        Me.TableLayoutPanel18.Name = "TableLayoutPanel18"
-        Me.TableLayoutPanel18.RowCount = 1
-        Me.TableLayoutPanel18.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel18.Size = New System.Drawing.Size(334, 82)
-        Me.TableLayoutPanel18.TabIndex = 4
-        '
-        'btn_transaktionOK
-        '
-        Me.btn_transaktionOK.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_transaktionOK.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btn_transaktionOK.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_transaktionOK.Location = New System.Drawing.Point(249, 3)
-        Me.btn_transaktionOK.Name = "btn_transaktionOK"
-        Me.btn_transaktionOK.Size = New System.Drawing.Size(82, 76)
-        Me.btn_transaktionOK.TabIndex = 13
-        Me.btn_transaktionOK.Text = "OK"
-        Me.btn_transaktionOK.UseVisualStyleBackColor = True
-        Me.btn_transaktionOK.Visible = False
-        '
         'FullNode_Wallet
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
@@ -799,12 +799,15 @@ Partial Class FullNode_Wallet
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel4.ResumeLayout(False)
         Me.TableLayoutPanel5.ResumeLayout(False)
+        Me.TableLayoutPanel18.ResumeLayout(False)
         Me.TableLayoutPanel6.ResumeLayout(False)
         Me.TableLayoutPanel7.ResumeLayout(False)
         Me.TableLayoutPanel7.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TableLayoutPanel9.ResumeLayout(False)
+        Me.TableLayoutPanel8.ResumeLayout(False)
+        Me.TableLayoutPanel16.ResumeLayout(False)
         Me.TableLayoutPanel13.ResumeLayout(False)
         CType(Me.pb_swapToken, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
@@ -817,12 +820,9 @@ Partial Class FullNode_Wallet
         Me.TableLayoutPanel10.PerformLayout()
         Me.TableLayoutPanel11.ResumeLayout(False)
         Me.TableLayoutPanel11.PerformLayout()
-        Me.TableLayoutPanel8.ResumeLayout(False)
-        Me.TabPage3.ResumeLayout(False)
         Me.TableLayoutPanel15.ResumeLayout(False)
-        Me.TableLayoutPanel16.ResumeLayout(False)
         Me.TableLayoutPanel17.ResumeLayout(False)
-        Me.TableLayoutPanel18.ResumeLayout(False)
+        Me.TabPage3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

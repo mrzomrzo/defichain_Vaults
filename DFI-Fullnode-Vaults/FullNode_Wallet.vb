@@ -11,7 +11,6 @@ Public Class FullNode_Wallet
     Public Const textaddremoveCollateral = "Sicherheiten hinzufügen/entfernen"
     Public Const textDarlehen = "Darlehen bearbeiten"
     Public Const textaddremoveLoan = "Kredit ausleihen/rückzahlen"
-    Public rrrr As String
 
     Private Sub FullNode_Wallet_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_Settings()

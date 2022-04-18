@@ -199,7 +199,7 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACkuumm/wFatf5y3UySnwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pb_swapToken.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_openSwap.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAUhpJREFUeF7t
         3QmYVdWZL3xxSGJaEztWNeSc7T7n1GDAElJ0GbjE4kNBJTgFI7SgUcTQBtDEhGtLPiyZBLFJ3VuQC/iB
@@ -555,7 +555,7 @@
         dQ8dQRB/5qyz/i9xdn3Npgr+rAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btn_openSwap.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pb_swapToken.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAUhpJREFUeF7t
         3QmYVdWZL3xxSGJaEztWNeSc7T7n1GDAElJ0GbjE4kNBJTgFI7SgUcTQBtDEhGtLPiyZBLFJ3VuQC/iB
