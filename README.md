@@ -6,11 +6,12 @@ In the next few days, I will expand the app to also profit from the FutureSwaps.
 
 # How to use and install
 1. you need a Fullnode-Wallet, download the DeFi Wallet desktop app  https://defichain.com/downloads
-2. bevor you run the FullNode_Wallet.exe, open the jsonFile - DFI-Fullnode-Vaults\DFI-Fullnode-Vaults\bin\Debug\settings.json
-3. to find your settings on the Path - C:\Users\{yourUserName}\.defi\defi.conf
-3. edit the Key "address" , "node_User" , "node_Password" and optional "node_URL"
-4. run the App - DFI-Fullnode-Vaults\DFI-Fullnode-Vaults\bin\Debug\FullNode_Wallet.exe
-5. if no errors happen then you can create and manage vaults :)
+2. run your DFI-DesktopWallet, the Wallet must running to connect myAPP
+3. bevor you run myApp(FullNode_Wallet.exe), open the jsonFile - DFI-Fullnode-Vaults\DFI-Fullnode-Vaults\bin\Debug\settings.json
+4. to find your settings on the Path - C:\Users\{yourUserName}\.defi\defi.conf
+5. edit the Key "address" , "node_User" , "node_Password" and optional "node_URL"
+6. run the App - DFI-Fullnode-Vaults\DFI-Fullnode-Vaults\bin\Debug\FullNode_Wallet.exe
+7. if no errors happen then you can create and manage vaults :)
 
 
 # Disclaimer
