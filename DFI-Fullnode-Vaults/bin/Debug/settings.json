@@ -2,8 +2,12 @@
   "node_User": "VcflzEQq",
   "node_Password": "6d3edc407578f8a26b7f481555a32d5a9a174e911953358b0f35d017122e2bec",
   "node_URL": "http://127.0.0.1:8554/",
-  "address": "dSBVE8ovbCMXCzjPRdpyEkGMspk6nfGHdo",
-  "logToFile": true,
+  "address1": "",
+  "address2": "",
+  "address3": "",
+  "address4": "",
+  "address5": "",
+  "logToFile": "notUsedNow",
   "telegram": {
     "token": "notUsedNow",
     "chatId": "notUsedNow"

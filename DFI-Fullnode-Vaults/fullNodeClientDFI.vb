@@ -43,13 +43,16 @@ Public Class fullNodeClientDFI
         End If
         Return jO
     End Function
+    Public Function isAddress_Mine(address As String) As Boolean
+        Return rpc("getaddressinfo", """" & address & """")("result")("ismine")
+    End Function
     Public Function get_blockHeight() As Integer
         Return rpc("getblockcount")("result")
     End Function
     Public Function get_getblockchaininfo() As JObject
         Return rpc("getblockchaininfo")("result")
     End Function
-    Public Function get_furureSwapBlock() As Integer
+    Public Function get_futureSwapBlock() As Integer
         Return rpc("getfutureswapblock")("result")
     End Function
     Public Function get_nextPriceBlock() As Integer
@@ -60,6 +63,9 @@ Public Class fullNodeClientDFI
     End Function
     Public Function get_getToken(tokenName As String) As JObject
         Return rpc("gettoken", """" & tokenName & """")("result").First.First
+    End Function
+    Public Function get_listPoolPairs() As JObject
+        Return rpc("listpoolpairs")("result")
     End Function
     Public Function get_listTokens() As JObject
         Return rpc("listtokens")("result")
@@ -116,6 +122,16 @@ Public Class fullNodeClientDFI
         Next
         Return 0
     End Function
+    Public Function get_transaction(txId As String) As JObject
+        Return rpc("gettransaction", """" & txId & """")("result")
+    End Function
+    Public Function get_myPendingFutureSwaps() As JArray
+        Return rpc("getpendingfutureswaps", """" & walletaddress & """")("result")("values")
+    End Function
+    Public Function get_allPendingFutureSwaps() As JArray
+        Return rpc("listpendingfutureswaps")("result")
+    End Function
+
 
 
     '#####################################################################################
@@ -126,6 +142,9 @@ Public Class fullNodeClientDFI
     End Function
     Public Function create_newVault() As Boolean
         Return runCommand("createvault", """" & walletaddress & """ , ""MIN150""")
+    End Function
+    Public Function close_Vault(vaultID As String) As Boolean
+        Return runCommand("closevault", """" & vaultID & """,""" & walletaddress & """")
     End Function
     Public Function deposit_toVault(vaultID As String, amount As Decimal, asset As String) As Boolean
         Return runCommand("deposittovault", """" & vaultID & """,""" & walletaddress & """,""" & amount & "@" & asset & """")
@@ -139,11 +158,25 @@ Public Class fullNodeClientDFI
     Public Function take_Loan(vaultID As String, amount As Decimal, asset As String) As Boolean
         Return runCommand("takeloan", "{""vaultId"":""" & vaultID & """,""to"":""" & walletaddress & """,""amounts"":""" & amount & "@" & asset & """}")
     End Function
+    Public Function setfutureSwap(amount As Decimal, lockedAsset As String, returnAsset As String) As Boolean
+        If lockedAsset = "DUSD" Then
+            Return runCommand("futureswap", """" & walletaddress & """,""" & amount & "@" & lockedAsset & """,""" & returnAsset & """")
+        Else
+            Return runCommand("futureswap", """" & walletaddress & """,""" & amount & "@" & lockedAsset & """")
+        End If
+    End Function
+    Public Function withdrawfutureSwap(amount As Decimal, lockedAsset As String, returnAsset As String) As Boolean
+        If lockedAsset = "DUSD" Then
+            Return runCommand("withdrawfutureswap", """" & walletaddress & """,""" & amount & "@" & lockedAsset & """,""" & returnAsset & """")
+        Else
+            Return runCommand("withdrawfutureswap", """" & walletaddress & """,""" & amount & "@" & lockedAsset & """")
+        End If
+    End Function
     Private Function runCommand(method As String, Optional params As String = Nothing)
-        Dim hash = rpc(method, params)("result")
-        If hash.ToString.Length = 64 Then
+        Dim txId = rpc(method, params)("result")
+        If txId.ToString.Length = 64 Then
+            FullNode_Wallet.lnk_transaction.Tag = txId.ToString
             FullNode_Wallet.waitforTransaktion = True
-            FullNode_Wallet.lnk_transaction.Tag = hash.ToString
             Return True
         End If
         Return False
